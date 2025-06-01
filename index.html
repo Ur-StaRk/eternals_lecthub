@@ -1,31 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-    <meta name="viewport" user-scalable=no content="width=device-width, initial-scale=1.0">
-  <title>Video Player</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #222;
-    }
-    video {
-      max-width: 90%;
-      border: 4px solid #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0">
+    <title>Video Player-GFG</title>
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" 
+          href="/style.css">
+
 </head>
+
 <body>
+    <div class="gfg">
+        <p>GeeksForGeeks</p>
+        <p>Custom Video Player</p>
+    </div>
+  
+    <!-- Video container -->
+    <div class="video-container">
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20231020170918/Thumbnail-(1).jpg"
+               id="video-thumbnail">
+        <video id="video">
+            
+          <!-- Video source -->
+            <source
+                src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20231020155223/Full-Stack-Development-_-LIVE-Classes-_-GeeksforGeeks.mp4"
+                type="video/mp4">
+        </video>
+      
+        <!-- Controlers continer -->
+        <div class="controls">
+            
+          <!-- Left controller div -->
+            <div class="left">
+                <button id="skipminus-10">
+                    <i class="fa-solid fa-backward"></i>
+                  </button>
+                <button id="play-pause">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                <button id="skip-10">
+                      <i class="fa-solid fa-forward"></i>
+                  </button>
+            </div>
+          
+      <!-- div for progress bar -->
+            <div class="video-timer">
+                <span id="current-time">00:00</span>
+                <span id="separator">/</span>
+                <span id="max-duration">00:00</span>
+            </div>
+            <div class="playback-line">
+                <div class="progress-bar"></div>
 
-  <video controls autoplay>
-    <source src="/VID_20250531_190300_095.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
+            </div>
+          
+            <!-- Right controller div -->
+            <div class="right">
+                <div class="volume-container">
+                    <div id="mute">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <input type="range" 
+                           id="volume" 
+                           min="0" 
+                           max="1" 
+                           step="0.01" 
+                           value="1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
 </body>
+
 </html>

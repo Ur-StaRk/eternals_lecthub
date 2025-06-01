@@ -6,6 +6,19 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
 body{
   min-height: 100vh;
   background: #E3F2FD;
